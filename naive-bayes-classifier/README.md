@@ -9,6 +9,8 @@ For example, you can use:
 Feature 1: .30154734233361247
 Feature 2: 2.3649610024662255
 
+The code uses sklearn's train_test_split function to train the dataset and naive_bayes to import the Gaussian Naive Bayes classifier.
+
 About:
 Naive Bayes is a classifier algorithm that assumes each pair of features being classified is independent of each other. 
 
