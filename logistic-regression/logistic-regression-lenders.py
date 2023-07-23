@@ -25,7 +25,7 @@ def classify_new_data(classifier, new_data_points, scaler):
 # Main function
 def main():
     # Load data from CSV
-    file_path = '/Users/loughlinrodd/Desktop/ai-problems/lender-dataset - lender-dataset.csv'  # Replace with the actual file path
+    file_path = 'filepath'  # Replace with the actual file path
     data = load_csv_data(file_path)
 
     # Separate features and labels
