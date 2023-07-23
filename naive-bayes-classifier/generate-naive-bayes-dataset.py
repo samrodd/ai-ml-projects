@@ -26,7 +26,7 @@ dataset = generate_synthetic_dataset(num_samples=1000)
 print(dataset.head())
 
 # Export the dataset to a CSV file
-file_path = 'filepatch'  # Replace with the actual file path and name
+file_path = 'filepath'  # Replace with the actual file path and name
 export_to_csv(dataset, file_path)
 
 print("Dataset exported to CSV successfully.")
