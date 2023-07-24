@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 
 # Load the dataset from CSV file
-dataset_path = '/Users/loughlinrodd/Desktop/ai-problems/knearest-neighbors/lender-dataset-nearest-neighbors.csv'
+dataset_path = 'filepath'
 df = pd.read_csv(dataset_path)
 
 # target variable column name is 'Approved', and 'lender' is one of the feature columns
