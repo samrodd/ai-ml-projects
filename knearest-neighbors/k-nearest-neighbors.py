@@ -6,7 +6,7 @@ from sklearn.neighbors import KNeighborsClassifier
 dataset_path = '/Users/loughlinrodd/Desktop/ai-problems/knearest-neighbors/lender-dataset-nearest-neighbors.csv'
 df = pd.read_csv(dataset_path)
 
-# Assuming your target variable column name is 'loan_status', and 'lender' is one of the feature columns
+# target variable column name is 'Approved', and 'lender' is one of the feature columns
 X = df.drop(columns=['Approved'])
 y = df['Approved']
 
