@@ -1,4 +1,4 @@
-This directory consists of two files to run a Euclidian K Nearest Neighbors algorithm on a dataset of 100,000 loan applications. 
+This directory consists of a python file to run a Euclidian K Nearest Neighbors algorithm on a dataset of 100,000 loan applications. 
 
 Code employs KNeighborsClassifier from sklearn.neighbors and train_test_split from sklearn.model_selection to split the dataset into 
 training and testing data and then train the model.
