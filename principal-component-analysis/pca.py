@@ -12,23 +12,13 @@ n_samples_per_cluster = 100
 
 # Mean and standard deviation for each feature in the two clusters
 # Mean_cluster defines the average values of the three components of the dataset
-mean_cluster1 = [3, 5, 8]
+mean_cluster1 = [13, 5, 8]
 # std_cluster defines the standard deviation of each feature in the cluster
 std_cluster1 = [1, 1.5, 2]
 
 mean_cluster2 = [6, 9, 12]
 std_cluster2 = [1, 1.5, 2]
 
-# Generate data points for each cluster
-# Number of data points in each cluster
-n_samples_per_cluster = 100
-
-# Mean and standard deviation for each feature in the two clusters
-mean_cluster1 = [2, 9, 8]
-std_cluster1 = [1, 1.5, 2]
-
-mean_cluster2 = [6, 19, 2]
-std_cluster2 = [1, 1.5, 2]
 
 # Generate data points for each cluster with the number of features corresponding to len() of each cluster
 cluster1_data = np.random.normal(loc=mean_cluster1, scale=std_cluster1, size=(n_samples_per_cluster, len(mean_cluster1)))
@@ -45,7 +35,7 @@ scaler = StandardScaler()
 X_std = scaler.fit_transform(X)
 
 # Perform PCA
-pca = PCA(n_components=2)
+pca = PCA(n_components='mle')
 principal_components = pca.fit_transform(X_std)
 
 # Create a DataFrame for the principal components
