@@ -11,15 +11,28 @@ np.random.seed(42)
 n_samples_per_cluster = 100
 
 # Mean and standard deviation for each feature in the two clusters
+# Mean_cluster defines the average values of the three components of the dataset
 mean_cluster1 = [3, 5, 8]
+# std_cluster defines the standard deviation of each feature in the cluster
 std_cluster1 = [1, 1.5, 2]
 
 mean_cluster2 = [6, 9, 12]
 std_cluster2 = [1, 1.5, 2]
 
 # Generate data points for each cluster
-cluster1_data = np.random.normal(loc=mean_cluster1, scale=std_cluster1, size=(n_samples_per_cluster, 3))
-cluster2_data = np.random.normal(loc=mean_cluster2, scale=std_cluster2, size=(n_samples_per_cluster, 3))
+# Number of data points in each cluster
+n_samples_per_cluster = 100
+
+# Mean and standard deviation for each feature in the two clusters
+mean_cluster1 = [2, 9, 8]
+std_cluster1 = [1, 1.5, 2]
+
+mean_cluster2 = [6, 19, 2]
+std_cluster2 = [1, 1.5, 2]
+
+# Generate data points for each cluster with the number of features corresponding to len() of each cluster
+cluster1_data = np.random.normal(loc=mean_cluster1, scale=std_cluster1, size=(n_samples_per_cluster, len(mean_cluster1)))
+cluster2_data = np.random.normal(loc=mean_cluster2, scale=std_cluster2, size=(n_samples_per_cluster, len(mean_cluster2)))
 
 # Combine the two clusters into a single dataset
 X = np.vstack((cluster1_data, cluster2_data))
