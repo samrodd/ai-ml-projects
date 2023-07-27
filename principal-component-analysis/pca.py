@@ -19,8 +19,7 @@ std_cluster1 = [1, 1.5, 2]
 mean_cluster2 = [6, 9, 12]
 std_cluster2 = [1, 1.5, 2]
 
-
-# Generate data points for each cluster with the number of features corresponding to len() of each cluster
+# Generate data points for each cluster
 cluster1_data = np.random.normal(loc=mean_cluster1, scale=std_cluster1, size=(n_samples_per_cluster, len(mean_cluster1)))
 cluster2_data = np.random.normal(loc=mean_cluster2, scale=std_cluster2, size=(n_samples_per_cluster, len(mean_cluster2)))
 
@@ -44,10 +43,22 @@ pca_df["Cluster"] = y
 
 # Plot the principal components
 plt.figure(figsize=(8, 6))
-plt.scatter(pca_df["PC1"], pca_df["PC2"], c=pca_df["Cluster"], cmap="viridis", edgecolors="k")
-plt.xlabel("Principal Component 1")
-plt.ylabel("Principal Component 2")
-plt.title("PCA Analysis of Synthetic Dataset")
+
+# Determine the number of components to plot (based on MLE result)
+num_components_to_plot = min(2, pca.n_components_)
+
+# Create a scatter plot for the selected number of components
+if num_components_to_plot == 1:
+    plt.scatter(pca_df["PC1"], np.zeros_like(pca_df["PC1"]), c=pca_df["Cluster"], cmap="viridis", edgecolors="k")
+    plt.xlabel("Principal Component 1")
+elif num_components_to_plot == 2:
+    plt.scatter(pca_df["PC1"], pca_df["PC2"], c=pca_df["Cluster"], cmap="viridis", edgecolors="k")
+    plt.xlabel("Principal Component 1")
+    plt.ylabel("Principal Component 2")
+else:
+    print(f"MLE selected {num_components_to_plot} components. Unable to plot in 2D.")
+
+plt.title("PCA Analysis of Synthetic Dataset with MLE")
 plt.colorbar(label="Cluster")
 plt.show()
 
