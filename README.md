@@ -7,3 +7,4 @@ K-Nearest Neighbors
 Logistic Regression
 Naive Bayes
 Sentiment Analysis
+Dimension Reduction for data preprocessing (Principal Compoenent Analysis and Univariate Feature Selection)
