@@ -1,3 +1,6 @@
+The goal of this code is to implement a PCA analysis on a synthetic dataset. PCA is a preprocessing step to perform on a dataset before 
+using a machine learning algorithm. It is a form of dimension reduction.
+
 This python code generates a synthetic dataset with two clusters, each containing 3 features.
 We then combine the two clusters into a single dataset and standardrize it with StandardScaler to put all the features on the same scale.
 We then perform Principal Component Analysis (PCA) on the synthetic data with n_components='mle' (mle=Maximum Likelihood Estimation). 
