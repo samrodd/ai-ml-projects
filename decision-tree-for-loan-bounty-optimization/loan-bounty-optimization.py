@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 # Step 1 - preprocess the dataset, split it into training and test data sets, and establish a baseline (approval rate)
 # for each lender 
 # Load the data from a CSV
-df = pd.read_csv('/Users/loughlinrodd/Desktop/ai-problems/loan-bounty-optimization/loan_data.csv')
+df = pd.read_csv('download the dataset in the repo and set this value to the directory where it resides on your local')
 
 # Define the bounty for each lender
 bounties = {0: 250, 1: 350, 2: 150}
