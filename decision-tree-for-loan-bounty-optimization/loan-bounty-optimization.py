@@ -5,10 +5,10 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 
-# Step 1 - preprocess the dataset, split it into training and test data sets, and establish a baseline (approval rate)
+# Step 1 - Import the data and define key variables 
 # for each lender 
 # Load the data from a CSV
-df = pd.read_csv('download the dataset in the repo and set this value to the directory where it resides on your local')
+df = pd.read_csv('/Users/loughlinrodd/Desktop/ai-problems/loan-bounty-optimization/loan_data.csv')
 
 # Define the bounty for each lender
 bounties = {0: 250, 1: 350, 2: 150}
@@ -58,8 +58,8 @@ for lender in df['lender'].unique():
     y_lender = lender_data['Approved']
     # Split the data for the current lender into training and testing sets using 20% of the data for testing. 
     X_train, X_test, y_train, y_test = train_test_split(X_lender, y_lender, test_size=0.2, random_state=42)
-    # Set clf to a decision tree classififer object with random_state=42 to set a seed for the random number generator used by the decision tree model. This will make our results deterministic
-    # And uniform each time we run the code
+    # Set clf to a decision tree classififer object with random_state=42 to set a seed for the random number generator used by the decision tree model. 
+    # This will make our results deterministic and uniform each time we run the code
     clf = DecisionTreeClassifier(random_state=42)
     # Fit clf to the training data
     clf.fit(X_train, y_train)
@@ -96,7 +96,7 @@ for index, row in df.iterrows():
             total_bounty_per_lender_after[lender] += bounties[lender]
             break # Exit the loop if loan approved. Since loans are evaluated by highest bounty lender first, once we get an approval we can exit the loop.
 
-# Step 6: Print the required information
+# Step 7: Print the required information
 print("Number of Approvals Before Decision Tree:")
 print(baseline_approval_rates * df.groupby('lender').size())
 print(f"Total Bounty Before Decision Tree: {total_bounty_before}")
