@@ -1,6 +1,6 @@
 import pinecone
 
-pinecone.init(api_key="51d35fe6-6d32-405d-81f0-fb9f42f3b2bc", environment="us-west4-gcp-free")
+pinecone.init(api_key="api_key", environment="us-west4-gcp-free")
 
 #create the index
 #pinecone.create_index("quickstart", dimension=8, metric="euclidean")
