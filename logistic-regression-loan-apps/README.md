@@ -22,7 +22,7 @@ The goal of the code is to train a Logistic Regression on the dataset and then r
 
 Simply download the python file and the dataset to the same directory and run the python file. 
 
-Provide the inputs when prompted and see whether 'approved' for the new loan application is 'true' or 'false'
+Provide the inputs when prompted and the output will be whether the new loan application's approval is 'true' or 'false'
 
 
 For rank-feature-importance.py:
