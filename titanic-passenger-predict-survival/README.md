@@ -1,5 +1,5 @@
 Code uses a randomForestClassifier to predict the survival of passengers on the Titanic.
-The predictions are from the classifier are output into submission.csv
+The predictions are from the classifier are output into submission.csv.
 test.csv is the testing data for the classifier, it does not have a column indicating whether the passenger survived.
 traain.csv is the training data for the classifier, it does have a column indicating whether the passenger survived.
 
