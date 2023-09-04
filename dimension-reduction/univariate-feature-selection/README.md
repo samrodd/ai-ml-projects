@@ -9,7 +9,7 @@ target variable.
 The code uses the SelectKBest class from scikit-learn to select the top k (k=4) features and uses f_classif as the scoring function, 
 which gives us the F value.
 
-After trial and error, I decided to pick k=4 because I wanted to selection to output non-uniform features for each lender. With values of 1-3, 
+After trial and error, I decided to pick k=4 because I wanted the feature selection to output non-uniform features for each lender. With values of 1-3, 
 the selection output the same variables for each lender. In essence, I wanted to find the point at which for at least one of the lenders the
 set of the most important features differed in some way. At k=4, we can see that Lender 1 has a 4th most important feature of ever_bankrupt_or_foreclose,
 while Lenders 2 and 3 have a 4th most important value of loan_amount. Prior to the 4th most important feature, 
