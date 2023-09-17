@@ -11,4 +11,4 @@ Logistic Regression to predcit whether customers will default on credit card bil
 Naive Bayes,
 Sentiment Analysis,
 Dimension Reduction for data preprocessing (Principal Compoenent Analysis and Univariate Feature Selection),
-Langchain and Open AI projects
+Streamlit, Langchain, and Open AI projects
